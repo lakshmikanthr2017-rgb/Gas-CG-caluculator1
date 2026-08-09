@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAS CG Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GAS CG CONVERTER</h1>
+            <p>Enter amounts below to calculate GAS CG and remaining costs automatically.</p>
+        </header>
+
+        <div class="calculator-grid">
+            <!-- LPS MDM CG -->
+            <div class="card">
+                <h2>MDM GAS CG (LPS)</h2>
+                <div class="input-group">
+                    <label for="lps-cg">MDM CG (₹):</label>
+                    <input type="number" id="lps-cg" class="cg-input" placeholder="0" step="any">
+                </div>
+                <div class="result-box">
+                    <p><span>GAS CG:</span> <strong id="lps-gas">₹ 0</strong></p>
+                    <p><span>VEGETABLES+SALT+SPICES CG:</span> <strong id="lps-rest">₹ 0</strong></p>
+                </div>
+            </div>
+
+            <!-- HPS MDM CG -->
+            <div class="card">
+                <h2>MDM GAS CG (HPS)</h2>
+                <div class="input-group">
+                    <label for="hps-cg">MDM CG (₹):</label>
+                    <input type="number" id="hps-cg" class="cg-input" placeholder="0" step="any">
+                </div>
+                <div class="result-box">
+                    <p><span>GAS CG:</span> <strong id="hps-gas">₹ 0</strong></p>
+                    <p><span>VEGETABLES+SALT+SPICES CG:</span> <strong id="hps-rest">₹ 0</strong></p>
+                </div>
+            </div>
+
+            <!-- SNF CG -->
+            <div class="card">
+                <h2>GAS CG IN S N F CG</h2>
+                <div class="input-group">
+                    <label for="snf-cg">SNF CG (₹):</label>
+                    <input type="number" id="snf-cg" class="cg-input" placeholder="0" step="any">
+                </div>
+                <div class="result-box">
+                    <p><span>GAS CG:</span> <strong id="snf-gas">₹ 0</strong></p>
+                    <p><span>EXCEPT GAS CG:</span> <strong id="snf-rest">₹ 0</strong></p>
+                </div>
+            </div>
+
+            <!-- MILK CG -->
+            <div class="card">
+                <h2>GAS CG IN MILK CG</h2>
+                <div class="input-group">
+                    <label for="milk-cg">MILK CG (₹):</label>
+                    <input type="number" id="milk-cg" class="cg-input" placeholder="0" step="any">
+                </div>
+                <div class="result-box">
+                    <p><span>GAS CG:</span> <strong id="milk-gas">₹ 0</strong></p>
+                    <p><span>EXCEPT GAS CG:</span> <strong id="milk-rest">₹ 0</strong></p>
+                </div>
+            </div>
+
+            <!-- CEPMIZ CG -->
+            <div class="card">
+                <h2>GAS CG CEPMIZ CG</h2>
+                <div class="input-group">
+                    <label for="cepmiz-cg">CEPMIZ CG (₹):</label>
+                    <input type="number" id="cepmiz-cg" class="cg-input" placeholder="0" step="any">
+                </div>
+                <div class="result-box">
+                    <p><span>GAS CG:</span> <strong id="cepmiz-gas">₹ 0</strong></p>
+                    <p><span>EXCEPT GAS CG:</span> <strong id="cepmiz-rest">₹ 0</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary-section">
+            <h2>Calculation Summary Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Total CG (₹)</th>
+                        <th>GAS CG (₹)</th>
+                        <th>Remaining CG (₹)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MDM CG (LPS)</td>
+                        <td id="tbl-lps-total">₹ 0</td>
+                        <td id="tbl-lps-gas">₹ 0</td>
+                        <td id="tbl-lps-rest">₹ 0</td>
+                    </tr>
+                    <tr>
+                        <td>MDM CG (HPS)</td>
+                        <td id="tbl-hps-total">₹ 0</td>
+                        <td id="tbl-hps-gas">₹ 0</td>
+                        <td id="tbl-hps-rest">₹ 0</td>
+                    </tr>
+                    <tr>
+                        <td>SNF CG</td>
+                        <td id="tbl-snf-total">₹ 0</td>
+                        <td id="tbl-snf-gas">₹ 0</td>
+                        <td id="tbl-snf-rest">₹ 0</td>
+                    </tr>
+                    <tr>
+                        <td>MILK CG</td>
+                        <td id="tbl-milk-total">₹ 0</td>
+                        <td id="tbl-milk-gas">₹ 0</td>
+                        <td id="tbl-milk-rest">₹ 0</td>
+                    </tr>
+                    <tr>
+                        <td>CEPMIZ CG</td>
+                        <td id="tbl-cepmiz-total">₹ 0</td>
+                        <td id="tbl-cepmiz-gas">₹ 0</td>
+                        <td id="tbl-cepmiz-rest">₹ 0</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Grand Total</th>
+                        <th id="total-cg">₹ 0</th>
+                        <th id="total-gas">₹ 0</th>
+                        <th id="total-rest">₹ 0</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
